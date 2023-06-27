@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --btn-carousel-size: 3rem;
+}
+
+.carousel {
+  margin-bottom: 1rem;
+  display: flex;
+  overflow: hidden;
+  width: 1512px;
+  margin: auto;
+}
+
+.box--cards {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 2 * var(--btn-carousel-size));
+  transform: translateX(0);
+  transition: transform 500ms ease-in-out;
+}
+
+.card {
+  padding: 0.25rem;
+  position: relative;
+}
+
+.card > img {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  /* aspect-ratio: 16 / 9; */
+}
+
+.btn-carousel {
+  margin: 2rem 0;
+  width: var(--btn-carousel-size);
+  background-color: #574fc6;
+  color: white;
+  font-size: 50px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.btn-carousel:hover {
+  background-color: rgb(75, 75, 75);
+}
+
+.btn-carousel:active {
+  background-color: #6e68c3;
+}
+
+.btn-generate {
+  padding: 1.5em;
+  display: block;
+  width: 100%;
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.btn-generate-list:active {
+  background-color: rgba(255, 0, 255, 0.5);
+}
+
+.sr-only {
+  /* For Checkbox to be hidden */
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  /* added line start */
+  white-space: nowrap;
+  /* added line end */
+  border: none;
+}
+
+.selected {
+  /* For exercise card selected state */
+  border: 2px solid rgb(228, 9, 9);
+}
+
+.form-groups {
+  /* For form button location */
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+  border: 2px solid rgb(247, 5, 5);
+  padding: 10px;
+}
+
+.form-groups > label {
+  /* For each individual checkbox button */
+  width: 175px;
+  padding: 20px 15px;
+  text-align: center;
+  background-color: #574fc6;
+  color: white;
+  border-radius: 8px;
+  font-size: 25px;
+  font-family: "Kanit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
